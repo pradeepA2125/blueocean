@@ -19,7 +19,7 @@ pipeline {
 
     stage('Security Scan') {
       steps {
-        sh 'echo "no scan"'
+        {          aqua locationType: 'local', localImage: 'alpine', hideBase: false, notCompliesCmd: '', onDisallowed: 'ignore', showNegligible: false          }
       }
     }
 
