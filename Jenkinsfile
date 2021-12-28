@@ -19,7 +19,7 @@ pipeline {
 
     stage('Security Scan') {
       steps {
-        aqua locationType: 'local', localImage: 'alpine', hideBase: false, notCompliesCmd: '', onDisallowed: 'ignore', showNegligible: false
+        aqua locationType: 'local', registry: 'Docker Hub', localImage: 'alpine', hideBase: false, notCompliesCmd: '', onDisallowed: 'ignore', showNegligible: false
       }
     }
 
